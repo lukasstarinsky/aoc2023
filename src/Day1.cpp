@@ -1,5 +1,3 @@
-#include <iostream>
-#include <fstream>
 #include <ranges>
 #include <unordered_map>
 #include "AOC.hpp"
@@ -7,7 +5,14 @@
 #ifdef Day1
 int Part1()
 {
-    std::ifstream inputFile("Day1.txt");
+    std::ifstream inputFile("data/Day1.txt");
+
+    if (!inputFile.is_open())
+    {
+        std::cerr << "Failed to open input data file.\n";
+        return 0;
+    }
+
     std::string line;
     int sum = 0;
 
@@ -40,7 +45,14 @@ int Part1()
 
 int Part2()
 {
-    std::ifstream inputFile("Day1.txt");
+    std::ifstream inputFile("data/Day1.txt");
+
+    if (!inputFile.is_open())
+    {
+        std::cerr << "Failed to open input data file.\n";
+        return 0;
+    }
+
     std::string line;
     int sum = 0;
 

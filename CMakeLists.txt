@@ -8,7 +8,13 @@ add_executable(aoc2023
     src/AOC.hpp
 
     src/Day1.cpp
+    src/Day2.cpp
 )
 
-file(GLOB_RECURSE INPUT_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.txt)
-file(COPY ${INPUT_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+add_custom_target(copy_input_data ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_CURRENT_SOURCE_DIR}/data
+    ${CMAKE_CURRENT_BINARY_DIR}/data
+    COMMENT "Copying input data files..."
+)
+add_dependencies(aoc2023 copy_input_data)

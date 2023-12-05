@@ -4,7 +4,7 @@
 #include <fstream>
 #include <vector>
 
-#define Day4
+#define Day5
 namespace AOC
 {
     void Run();

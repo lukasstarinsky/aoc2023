@@ -12,6 +12,7 @@ add_executable(aoc2023
     src/Day3.cpp
     src/Day4.cpp
     src/Day5.cpp
+    src/Day6.cpp
 )
 
 add_custom_target(copy_input_data ALL
